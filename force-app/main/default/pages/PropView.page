@@ -1,0 +1,12 @@
+<apex:page standardController="Property__c">
+    
+    <apex:pageBlock >
+        <apex:pageblocksection >
+            <apex:outputField value="{!Property__c.Property_Name__c}"/>
+            <apex:outputField value="{!Property__c.Address__c}"/>
+            <apex:outputField value="{!Property__c.Price__c}"/>
+            <apex:outputField value="{!Property__c.Status__c}"/>
+        </apex:pageblocksection>
+    </apex:pageBlock>
+    
+</apex:page>

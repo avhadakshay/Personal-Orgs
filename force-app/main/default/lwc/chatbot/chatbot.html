@@ -1,0 +1,16 @@
+<!-- chatbot.html -->
+<template>
+    <div class="container">
+        <div class="chat-history" if:true={chatHistory}>
+            <template for:each={chatHistory} for:item="message">
+                <div key={message.id} class={message.sender}>
+                    {message.text}
+                </div>
+            </template>
+        </div>
+        <div class="input-area">
+            <input type="text" value={userInput} placeholder="Type your message..." onkeyup={handleKeyUp} />
+            <button onclick={sendMessage}>Send</button>
+        </div>
+    </div>
+</template>

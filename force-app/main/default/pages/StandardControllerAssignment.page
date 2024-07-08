@@ -1,0 +1,14 @@
+<apex:page standardController="Property__c">
+    
+    <apex:pageblock >
+        <apex:pageblocksection title="Property Details" columns="1" >
+            
+            <h1>{!Property__c.Property_Name__c}</h1><br/>
+                <h1>{!Property__c.Address__c}</h1><br/>
+                <h1>{!Property__c.City__c}"</h1><br/>
+                <h1>{!Property__c.Status__c}</h1><br/>                
+                <h1>{!Property__c.Broker__r.Name}</h1><br/>         
+        </apex:pageblocksection>
+    </apex:pageblock>
+    
+</apex:page>

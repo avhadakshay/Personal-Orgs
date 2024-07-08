@@ -1,0 +1,18 @@
+<apex:page controller="AjaxDemoController" >
+    
+    <apex:form >
+    
+        <apex:actionFunction action="{!display}" name="disFun" reRender="msg"/>
+    	<apex:inputCheckbox onchange="disFun()"/>
+    	<apex:outputText value="{!message}" id="msg" />
+        <br/>
+        <br/>
+        <apex:outputText value="{!warningMessage}" id="warningmsg" />
+        
+        <apex:inputField value="{!acc.Name}"/>
+        <apex:actionsupport event="onchange" action="{!ShowWarning}" reRender="warningmsg"/>
+        
+        
+    </apex:form>
+    
+</apex:page>

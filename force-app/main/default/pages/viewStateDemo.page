@@ -1,0 +1,9 @@
+<apex:page controller="viewStateDemoController">
+    
+    <apex:form >
+        <apex:commandButton value="Show Message" action="{!changeData}" reRender="msg"/>
+        
+        <apex:outputText value="{!message}" id="msg" />
+    </apex:form>
+    
+</apex:page>

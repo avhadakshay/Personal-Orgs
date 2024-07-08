@@ -1,0 +1,19 @@
+<apex:page standardController="Property__c" recordSetVar="list">
+    
+    <apex:pageBlock >
+    	<apex:pageBlockTable value="{!list}" var="listVar">
+            <apex:column title="asd">
+            	<apex:outputLink value="" >{!listVar.Property_Name__c}
+                	<apex:param name="id" value="{!listVar.ID}"/>
+    			</apex:outputLink>            
+            </apex:column>
+    		
+        	<apex:column value="{!listVar.Price__c}"/>
+			<apex:column value="{!listVar.Broker__r.Name}"/>
+			<apex:column value="{!listVar.City__c}"/>
+    	</apex:pageBlockTable>    
+    </apex:pageBlock>
+        
+    <apex:detail subject="{!$CurrentPage.Parameters.id}"/>
+    
+</apex:page>

@@ -1,0 +1,35 @@
+<aura:component controller="OpportunityController" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="opportunities" type="Opportunity[]"/>
+    <ui:button label="Get Opportunities" press="{!c.getOpps}"/>
+    
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Opportunity Name">Opportunity Name</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Close Date">Close Date</div>
+                </th>
+            </tr>
+        </thead>
+        <aura:iteration var="opportunity" items="{!v.opportunities}">
+            
+  
+            
+            <tbody>
+                
+                
+                <tr class="slds-hint-parent">
+                    <td data-label="Opportunity Name">
+                        <div class="slds-truncate" title="Name">{!opportunity.Name}</div>
+                    </td>
+                    <td data-label="Close Date">
+                        <div class="slds-truncate" title="Closed Date">{!opportunity.CloseDate}</div>
+                    </td>                  
+                </tr>
+                
+            </tbody>
+        </aura:iteration>
+    </table>
+</aura:component>

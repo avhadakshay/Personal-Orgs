@@ -1,0 +1,6 @@
+<apex:page showHeader="true">
+    
+    <h2> This is just the start! Prepare for the journey. </h2>	
+    <apex:outputText >{!$User.FirstName + $User.LastName}</apex:outputText>
+    
+</apex:page>

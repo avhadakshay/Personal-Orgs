@@ -1,0 +1,9 @@
+<apex:page controller="displayController">
+    <apex:pageblock >
+        <apex:pageBlockSection >
+            
+            <apex:outputText value="{!message}" />
+            
+        </apex:pageBlockSection>
+    </apex:pageblock>
+</apex:page>

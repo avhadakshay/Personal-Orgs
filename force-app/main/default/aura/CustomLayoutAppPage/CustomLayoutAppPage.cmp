@@ -1,0 +1,40 @@
+<aura:component implements="lightning:apphomeTemplate">
+    
+    <aura:attribute name="sidebar" type="Aura.Component[]" />
+    <aura:attribute name="phaseTable" type="Aura.Component[]" />
+    <aura:attribute name="dashboard1" type="Aura.Component[]" />
+    <aura:attribute name="dashboard2" type="Aura.Component[]" />
+
+    <lightning:layout multipleRows="true">
+        <lightning:layoutItem size="2" padding="around-small">
+            <div class="sidebar">
+                 {!v.sidebar}
+            </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="10" padding="around-small">
+            <div>
+                <lightning:layout multipleRows="true">
+                    <lightning:layoutItem size="12" >
+                        <div class="phase-table">
+                            {!v.phaseTable}
+                        </div>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </div>
+            <div class="main-region">
+                <lightning:layout multipleRows="true">
+                    <lightning:layoutItem size="6" >
+                        <div class="dashboard1">
+                             {!v.dashboard1}
+                        </div>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="6" >
+                        <div class="dashboard1">
+                             {!v.dashboard2}
+                        </div>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

@@ -1,0 +1,21 @@
+<apex:page standardController="Account" extensions="myAccountControllerExtension">
+    
+    <apex:stylesheet value="{!$Resource.phasesLevel}"/>
+    
+    <apex:form >
+        
+        <apex:pageblock >
+    	<apex:pageblocksection >
+            <apex:outputText value="{!showMessage}" styleClass="sample"/> 
+    		<apex:outputField value="{!Account.AnnualRevenue}"/>
+        </apex:pageblocksection>
+        <apex:pageblockbuttons >
+            <apex:commandButton value="Calculate" action="{!calculate}"/>
+        </apex:pageblockbuttons>
+        
+    </apex:pageblock>
+        
+    </apex:form>
+    
+    
+</apex:page>

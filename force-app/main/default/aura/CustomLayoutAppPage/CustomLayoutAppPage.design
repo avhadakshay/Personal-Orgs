@@ -1,0 +1,8 @@
+<design:component>
+    <flexipage:template>
+        <flexipage:region name="sidebar" 	defaultWidth="SMALL" />
+        <flexipage:region name="phaseTable" defaultWidth="SMALL" />
+        <flexipage:region name="dashboard1" defaultWidth="SMALL" />
+        <flexipage:region name="dashboard2" defaultWidth="SMALL" />
+    </flexipage:template>
+</design:component>

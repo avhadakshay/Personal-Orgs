@@ -1,0 +1,7 @@
+.flexipageHeader {
+    height: 50px;
+	display: flex;
+	align-items: center;
+	flex: 1;
+	text-align: center;
+}

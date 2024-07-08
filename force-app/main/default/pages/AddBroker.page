@@ -1,0 +1,24 @@
+<apex:page standardController="Broker__c">
+  
+    <apex:form >
+    	<apex:pageBlock Title="Insert New Broker">
+            
+        	<apex:pageBlocksection title="Personal Details">
+    			<apex:inputField value="{!Broker__c.Name}" label="Broker Name"/>        
+                <apex:inputField value="{!Broker__c.Title__c}"/>
+            </apex:pageBlocksection>
+            
+            <apex:pageBlockSection title="Contact Details">
+                <apex:inputField value="{!Broker__c.Email__c}"/>
+                <apex:inputField value="{!Broker__c.Phone__c}"/>
+                <apex:inputField value="{!Broker__c.Mobile_Phone__c}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!Save}" value="Insert New Broker"/>
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+    </apex:form>
+  
+</apex:page>

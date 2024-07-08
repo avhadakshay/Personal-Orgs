@@ -1,0 +1,20 @@
+<apex:page standardController="Broker__c" extensions="brokerCustomController">
+    <apex:form >
+        <apex:pageblock title="Edit this Broker">
+            
+            <apex:pageblocksection title="Personal Details">
+                <apex:inputField value="{!broker.Name}"/>
+                <apex:Inputfield value="{!broker.Title__c}"/>
+            </apex:pageblocksection>
+            <apex:pageblockSection title="Contact Details">
+            	<apex:inputField value="{!broker.Email__c}"/>
+                <apex:Inputfield value="{!broker.Phone__c}"/>
+            </apex:pageblockSection>
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Store Broker"/>
+            </apex:pageBlockButtons>
+            
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

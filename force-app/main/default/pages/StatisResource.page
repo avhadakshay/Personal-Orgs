@@ -1,0 +1,13 @@
+<apex:page >
+  <apex:stylesheet value="{!$Resource.phasesLevel}"/>
+  <apex:image url="{!URLFOR($Resource.resource)}" width="300" height="300"/>
+  
+  <apex:pageBlock >
+  
+  <apex:outputText value="This is an sample text to test CSS"  styleClass="sample">
+  
+  </apex:outputText>
+  
+  </apex:pageblock>
+  
+</apex:page>

@@ -1,0 +1,53 @@
+<apex:page standardController="Contact" recordSetVar="people">
+    
+    <apex:form >
+        <apex:pageBlock title="My Contacts" id="contact_id">
+            
+            filter:
+            <apex:selectList value="{!filterId}" size="1">
+                <apex:selectOptions value="{!listViewOptions}"/>
+                <apex:actionSupport event="onChange" reRender="contacts_list"/>
+                
+            </apex:selectList>
+            <apex:pageBlockTable value="{!people}" var="contact" rows="20">
+                
+                <apex:column >
+                    <apex:commandLink >
+                        {!contact.FirstName}
+                        <apex:param name="cid" value="{!contact.id}"/>
+                    </apex:commandLink>
+                    
+                </apex:column>
+                <apex:column value="{!contact.LastName}"/>
+                <apex:column value="{!contact.Email}"/>
+                <apex:column value="{!contact.MobilePhone}"/>
+                <apex:column value="{!contact.Account.Name}"/>
+    		</apex:pageBlockTable> 
+        </apex:pageBlock>
+            
+        <table style="width: 100%"><tr>
+    <td>
+        <apex:outputText value="{!Pagenumber} of {!CEILING(PAGESIZE)}"/>
+    </td>            
+    <td align="center">
+        <apex:commandLink action="{!Previous}" value="<< Previous" rendered="{!HasPrevious}"/>
+        <apex:outputtext style="color: #ccc;"  value="<< Previous" rendered="{!NOT(HasPrevious)}"/>
+        <apex:commandLink action="{!Next}" value = "Next >>" rendered = "{!HasNext}"/>
+        <apex:outputText style="color: #ccc;" value ="Next >>" rendered = "{!NOT(HasNext)}"/>
+    </td>
+    
+    <td align="right">
+        <apex:selectList value="{!PageSize}" size="1">
+            	<apex:selectOption itemvalue="1" itemlabel="1"/>
+                <apex:selectOption itemvalue="20" itemlabel="20"/>
+                <apex:actionSupport event="onChange" reRender="contacts_list"/>
+            
+        </apex:selectList>
+    </td>
+</tr></table>
+       
+    </apex:form>
+
+    
+    
+</apex:page>

@@ -1,0 +1,23 @@
+<aura:component implements="lightning:homeTemplate">
+    <aura:attribute name="column1" type="Aura.Component[]" />
+    <aura:attribute name="column2" type="Aura.Component[]" />
+    <aura:attribute name="column3" type="Aura.Component[]" />
+    
+    <lightning:layout multipleRows="true">
+        <lightning:layoutItem size="12">
+            <div class="resizable-container">
+                <div class="resizable-section" data-direction="horizontal">
+                    Section 1
+                </div>
+                <div class="resizable-divider" data-direction="horizontal"></div>
+                <div class="resizable-section" data-direction="horizontal">
+                    Section 2
+                </div>
+                <div class="resizable-divider" data-direction="horizontal"></div>
+                <div class="resizable-section" data-direction="horizontal">
+                    Section 3
+                </div>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

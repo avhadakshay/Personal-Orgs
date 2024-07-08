@@ -1,0 +1,25 @@
+<apex:page controller="googleController">
+    <apex:form >
+        <apex:pageblocK >
+            <apex:pageblocksection >
+        		<apex:commandLink action="{!openGoogle}">
+            Open Google
+        </apex:commandLink>
+        <apex:commandButton value="Open Google" action="{!openGoogle}"/>        
+            </apex:pageblocksection>
+        </apex:pageblocK>
+        
+        <apex:pageblock >
+        	<apex:commandButton value="Open New Parameter Page" action="{!openGoogle}"/>
+            <br/>
+            <br/>
+            <apex:outputLink value="">
+                Open New Parameter Page by Output Link
+                <apex:param name="id" value="{!acc.name}"/>
+            </apex:outputLink>
+            <apex:outputText value="{!message}" />
+        </apex:pageblock>
+        
+    </apex:form>
+    
+</apex:page>
